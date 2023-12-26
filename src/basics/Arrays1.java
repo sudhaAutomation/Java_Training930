@@ -12,6 +12,7 @@ public class Arrays1 {// array is an object ,where we can store the similiar dat
 		int[] stdmarks = new int[6];
 		// in arrays, the values will starts to store from 0th index
 		stdmarks[0] = 80;
+		//
 		stdmarks[1] = 60;
 		stdmarks[2] = 90;
 		stdmarks[3] = 100;
