@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Admin Portal]">
+  <parameter name="password" value="123456"/>
+  <parameter name="browser" value="firefox"/>
+  <parameter name="url" value="http://integratedtoolingsystems.in/1swishzz_staging/admin"/>
+  <parameter name="username" value="admin@admin.com"/>
+  <test name="Smoke Testing">
+    <parameter name="password" value="123456"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="url" value="http://integratedtoolingsystems.in/1swishzz_staging/admin"/>
+    <parameter name="username" value="admin@admin.com"/>
+    <classes>
+      <class name="testNGpkg.CoursesList"/>
+      <class name="testNGpkg.LoginWithTestNG"/>
+    </classes>
+  </test> <!-- Smoke Testing -->
+  <test name="Smoke Testing(failed)">
+    <parameter name="password" value="123456"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="url" value="http://integratedtoolingsystems.in/1swishzz_staging/admin"/>
+    <parameter name="username" value="admin@admin.com"/>
+    <classes>
+      <class name="testNGpkg.CoursesList">
+        <methods>
+          <include name="tearDown"/>
+          <include name="categoryList"/>
+          <include name="setUp"/>
+          <include name="addCourseBtn"/>
+          <include name="addCourse"/>
+        </methods>
+      </class> <!-- testNGpkg.CoursesList -->
+      <class name="testNGpkg.LoginWithTestNG">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testNGpkg.LoginWithTestNG -->
+    </classes>
+  </test> <!-- Smoke Testing(failed) -->
+</suite> <!-- Failed suite [Admin Portal] -->
